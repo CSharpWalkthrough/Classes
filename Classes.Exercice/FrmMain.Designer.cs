@@ -87,6 +87,7 @@
             this.txtTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtTeacher.Location = new System.Drawing.Point(84, 124);
             this.txtTeacher.Name = "txtTeacher";
+            this.txtTeacher.ReadOnly = true;
             this.txtTeacher.Size = new System.Drawing.Size(137, 21);
             this.txtTeacher.TabIndex = 7;
             // 
@@ -115,6 +116,7 @@
             this.txtSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSubject.Location = new System.Drawing.Point(84, 90);
             this.txtSubject.Name = "txtSubject";
+            this.txtSubject.ReadOnly = true;
             this.txtSubject.Size = new System.Drawing.Size(137, 21);
             this.txtSubject.TabIndex = 4;
             // 
@@ -126,6 +128,7 @@
             this.cboClasses.Name = "cboClasses";
             this.cboClasses.Size = new System.Drawing.Size(293, 23);
             this.cboClasses.TabIndex = 3;
+            this.cboClasses.SelectedIndexChanged += new System.EventHandler(this.cboClasses_SelectedIndexChanged);
             // 
             // lblSubject
             // 
@@ -146,6 +149,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lvwStudents
             // 
@@ -269,6 +273,7 @@
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 
