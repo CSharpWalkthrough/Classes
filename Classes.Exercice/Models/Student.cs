@@ -12,6 +12,13 @@ namespace Classes.Exercice.Models
         private string firstName;
         private DateTime birthday;
 
+        public Student(string lastName, string firstName, DateTime birthday)
+        {
+            this.lastName = lastName;
+            this.firstName = firstName;
+            this.birthday = birthday;
+        }
+
         public string FullName { 
             get
             {

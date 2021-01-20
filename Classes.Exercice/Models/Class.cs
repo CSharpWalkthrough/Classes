@@ -22,6 +22,7 @@ namespace Classes.Exercice.Models
             this.students = students;
         }
 
+        public string Name { get; }
         public string Teacher { get; }
         public string Subject {
             get 
