@@ -8,7 +8,7 @@ namespace Classes.Exercice.Models
 {
     public class Subject
     {
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         public Subject(string name)
         {

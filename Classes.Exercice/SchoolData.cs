@@ -9,9 +9,9 @@ namespace Classes.Exercice
 {
     public class SchoolData
     {
-        public List<Subject> Subjects { get; set; }
-        public List<Student> Students { get; set; }
-        public List<Class> Classes { get; set; }
+        private List<Subject> Subjects { get; set; }
+        private List<Student> Students { get; set; }
+        private List<Class> Classes { get; set; }
 
         public SchoolData()
         {
