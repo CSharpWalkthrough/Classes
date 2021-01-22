@@ -4,6 +4,14 @@ This is a winforms app that manages school classes. User can create students and
 
 The classes to implement can be found below. Be sure to check the class diagram for a global view of the application.
 
+## Solution Explorer Structure
+
+> Note: The ClassDiagram.cd file should not be there
+
+![Solution Explorer Structure](SolutionStructure.png)
+
+## Class Diagram
+
 ![Class Diagram](ClassDiagram.png)
 
 ## Subject
