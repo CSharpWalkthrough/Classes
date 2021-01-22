@@ -15,21 +15,23 @@ namespace Classes.Exercice
         public FrmMain()
         {
             InitializeComponent();
+            // TODO: Initialize SchoolData and UI
         }
 
         private void cboClasses_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            // TODO: Display class info with students
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            // TODO: Display selected student's info
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            // TODO: If Text is "Add" => Create student
+            // TODO: If Text is "Update" => Edit student
         }
     }
 }
