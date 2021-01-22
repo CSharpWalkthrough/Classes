@@ -41,6 +41,8 @@
             this.chFullName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlStudent = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.chlClasses = new System.Windows.Forms.CheckedListBox();
             this.txtBirthday = new System.Windows.Forms.TextBox();
             this.lblBirthday = new System.Windows.Forms.Label();
@@ -49,8 +51,6 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlClasses.SuspendLayout();
             this.pnlStudent.SuspendLayout();
             this.SuspendLayout();
@@ -157,22 +157,24 @@
             this.chFullName,
             this.chAge});
             this.lvwStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lvwStudents.FullRowSelect = true;
             this.lvwStudents.HideSelection = false;
             this.lvwStudents.Location = new System.Drawing.Point(24, 187);
             this.lvwStudents.Name = "lvwStudents";
             this.lvwStudents.Size = new System.Drawing.Size(306, 177);
             this.lvwStudents.TabIndex = 0;
             this.lvwStudents.UseCompatibleStateImageBehavior = false;
+            this.lvwStudents.View = System.Windows.Forms.View.Details;
             // 
             // chFullName
             // 
             this.chFullName.Text = "Full Name";
-            this.chFullName.Width = 100;
+            this.chFullName.Width = 212;
             // 
             // chAge
             // 
             this.chAge.Text = "Age";
-            this.chAge.Width = 30;
+            this.chAge.Width = 90;
             // 
             // pnlStudent
             // 
@@ -192,8 +194,30 @@
             this.pnlStudent.Size = new System.Drawing.Size(330, 426);
             this.pnlStudent.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.Location = new System.Drawing.Point(31, 226);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Classes:";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnAdd.Location = new System.Drawing.Point(111, 379);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(124, 32);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // chlClasses
             // 
+            this.chlClasses.CheckOnClick = true;
             this.chlClasses.FormattingEnabled = true;
             this.chlClasses.Location = new System.Drawing.Point(34, 255);
             this.chlClasses.Name = "chlClasses";
@@ -263,27 +287,6 @@
             this.lblFirstName.Size = new System.Drawing.Size(70, 15);
             this.lblFirstName.TabIndex = 9;
             this.lblFirstName.Text = "First Name:";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnAdd.Location = new System.Drawing.Point(111, 379);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(124, 32);
-            this.btnAdd.TabIndex = 9;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(31, 226);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Classes:";
             // 
             // FrmMain
             // 

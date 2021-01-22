@@ -16,6 +16,7 @@ namespace Classes.Exercice
         public SchoolData()
         {
             // Initialize with test data
+            Students = new List<Student>();
             Students.AddRange(new List<Student>
             { 
                 new Student("Whiteford", "Thomas", DateTime.Parse("05/25/2000")),
@@ -25,9 +26,19 @@ namespace Classes.Exercice
                 new Student("Hill", "Anna", DateTime.Parse("05/31/1999")),
                 new Student("Weldon", "Max", DateTime.Parse("12/05/1998"))
             });
+
             Subject subject = new Subject("Maths");
+            Subjects = new List<Subject>();
+            Subjects.Add(subject);
+
+            Classes = new List<Class>();
             Classes.Add(new Class("Calculus 1", "Mr. Brown", subject, Students.Take(3).ToList()));
             Classes.Add(new Class("Calculus 2", "Mr. Monroe", subject, Students.Skip(3).ToList()));
+        }
+
+        public Student GetStudent(string fullName)
+        {
+            return Students.SingleOrDefault(s => s.FullName == fullName);
         }
 
         public List<Student> GetStudentsFromClass(string className)
@@ -43,25 +54,26 @@ namespace Classes.Exercice
             return Classes.SingleOrDefault(c => c.Name == className);
         }
 
+        public string[] GetAllClassesText()
+        {
+            return Classes.Select(c => c.Name).ToArray();
+        }
+
         public List<Class> GetStudentClasses(Student student)
         {
             return Classes.Where(c => c.Students.Contains(student)).ToList();
         }
 
-        public void CreateStudent(string fullName, string birthday, string[] classes)
+        public void CreateStudent(string firstName, string lastName, string birthday, List<string> classes)
         {
-            string[] name = fullName.Split(new string[] { ", " }, StringSplitOptions.None);
-            if (name.Length != 2)
-                throw new ArgumentException();
-
-            Student student = new Student(name[0], name[1], DateTime.Parse(birthday));
+            Student student = new Student(firstName, lastName, DateTime.Parse(birthday));
             Students.Add(student);
 
             foreach (string c in classes)
                 GetClass(c).AddStudent(student);
         }
 
-        public void EditStudent(Student student, string[] classNames)
+        public void EditStudent(Student student, List<string> classNames)
         {
             List<Class> oldClasses = GetStudentClasses(student);
             List<Class> classes = new List<Class>();

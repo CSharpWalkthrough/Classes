@@ -19,10 +19,19 @@ namespace Classes.Exercice.Models
             this.birthday = birthday;
         }
 
+        public string LastName { get { return lastName; } }
+        public string FirstName { get { return firstName; } }
+        public string Birthday { 
+            get
+            {
+                return birthday.ToString("MM/dd/yyyy");
+            }
+        }
+
         public string FullName { 
             get
             {
-                return firstName + ", " + lastName;
+                return lastName + ", " + firstName;
             } 
         }
 
