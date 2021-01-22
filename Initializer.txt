@@ -1,0 +1,29 @@
+Students = new List<Student>();
+Students.AddRange(new List<Student>
+{
+	new Student("Whiteford", "Thomas", DateTime.Parse("05/25/2000")),
+	new Student("Parks", "Erick", DateTime.Parse("07/11/2000")),
+	new Student("Smith", "Emily", DateTime.Parse("01/03/2001")),
+	new Student("James", "Bratt", DateTime.Parse("08/30/1995")),
+	new Student("Peterson", "Lily", DateTime.Parse("05/31/1999")),
+	new Student("Lee", "Mathew", DateTime.Parse("01/03/2001")),
+	new Student("Smith", "Alice", DateTime.Parse("08/30/1995")),
+	new Student("Hill", "Anna", DateTime.Parse("05/31/1999")),
+	new Student("Weldon", "Max", DateTime.Parse("12/05/1998"))
+});
+
+Subject maths = new Subject("Maths");
+Subject english = new Subject("English");
+Subject french = new Subject("French");
+
+Subjects = new List<Subject>();
+Subjects.Add(maths);
+Subjects.Add(english);
+Subjects.Add(french);
+
+Classes = new List<Class>();
+Classes.Add(new Class("Calculus 1", "Mr. Brown", maths, Students.Take(3).ToList()));
+Classes.Add(new Class("Calculus 2", "Mr. Monroe", maths, Students.Skip(3).ToList()));
+
+Classes.Add(new Class("Learning English from Scratch", "Mr. Roy", english, Students.Skip(4).ToList()));
+Classes.Add(new Class("Littérature française", "Mr. Tremblay", french, Students.Take(5).ToList()));
