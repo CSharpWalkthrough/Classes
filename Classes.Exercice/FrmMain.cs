@@ -26,7 +26,7 @@ namespace Classes.Exercice
             UpdateClassView();
         }
 
-        public void UpdateClassView()
+        private void UpdateClassView()
         {
             Class c = schoolData.GetClass(cboClasses.Text);
             DisplayClassInfo(c);
